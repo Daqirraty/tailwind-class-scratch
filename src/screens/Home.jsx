@@ -5,12 +5,26 @@ import ReversedDivSection from "../components/reversedDivSection";
 // import irresistible from "../assets/Irresistible.webp"
 // import cadburyAndMore from "../assets/cadburyAndMore.png"
 import wiggleVideo from "../assets/wiggle.mp4"; // adjust the path
+import databundle from "../assets/databundle.png"; // adjust the path
+// import submitNin from "../assets/submitNin.png"; // adjust the path
+// import submitNin from "../assets/submitNin.png"; // adjust the path
+// import submitNin from "../assets/submitNin.png"; // adjust the path
+// import submitNin from "../assets/submitNin.png"; // adjust the path
 
-import { Popover, Ripple, initTWE } from "tw-elements";
+import { Carousel, Popover, Ripple, initTWE } from "tw-elements";
+import { useEffect } from "react";
 
-initTWE({ Popover, Ripple });
-
+import vid from "../assets/vid.mp4"; // adjust the path
 const Home = () => {
+  useEffect(() => {
+    initTWE({
+      Carousel,
+      Popover,
+      Ripple,
+    });
+  }, []);
+  // initTWE({ Carousel });
+
   return (
     <div className="relative text-boluColos ">
       <Navbar />
@@ -88,7 +102,7 @@ const Home = () => {
 
       {/* Reversed Div 3 Section End*/}
       <video
-        className="videoWrapper w-full h-full object-cover"
+        className="videoWrapper w-full h-[15rem] object-cover"
         loop
         playsInline
         preload="auto"
@@ -98,7 +112,190 @@ const Home = () => {
         <source src={wiggleVideo} type="video/mp4" />
       </video>
 
-      {/* testing flowbite */}
+      {/* OUR SERVICES ON AITEL PAGE */}
+      <div className="flex justify-center items-center ">
+        <div className=" w-[75%] space-y-[5rem] my-[5rem] ">
+          {/* div A */}
+          <div className="">
+            <div className="flex justify-center items-center gap-2 ">
+              <span>|</span>
+              <p>Our Services</p>
+            </div>
+            <p className="text-center text-4xl ">
+              Quickly access our range of <b>products and services</b>
+            </p>
+          </div>
+
+          {/* div B */}
+          <div className=" flex items-center shadow-2xl p-5 rounded-sm justify-around ">
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {/* with grid */}
+      <div className="flex justify-center items-center ">
+        <div className=" w-[75%] space-y-[5rem] my-[5rem] ">
+          {/* div A */}
+          <div className="">
+            <div className="flex justify-center items-center gap-2 ">
+              <span>|</span>
+              <p>Our Services</p>
+            </div>
+            <p className="text-center text-4xl ">
+              Quickly access our range of <b>products and services</b>
+            </p>
+          </div>
+
+          {/* div B */}
+          <div className=" grid grid-cols-12 items-center shadow-2xl p-5 rounded-sm justify-around ">
+            <div className="min-w-[10rem] flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+            <span>|</span>
+            <div className="flex flex-col items-center justify-center">
+              <img src={databundle} width={60} alt="" />
+              <p className="text-lg">DATA BUNDLES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        className="inline-block rounded bg-danger px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-danger-3 transition duration-150 ease-in-out hover:bg-danger-accent-300 hover:shadow-danger-2 focus:bg-danger-accent-300 focus:shadow-danger-2 focus:outline-none focus:ring-0 active:bg-danger-600 active:shadow-danger-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+        data-twe-toggle="popover"
+        data-twe-title="Popover title"
+        data-twe-content="And here's some amazing content. It's very engaging. Right?"
+        data-twe-ripple-init
+        data-twe-ripple-color="light"
+      >
+        Click to toggle popover
+      </button>
+
+      {/* testing Tailwind Element */}
+      <div
+        id="carouselExampleSlidesOnly"
+        className="relative"
+        data-twe-carousel-init
+        data-twe-ride="carousel"
+      >
+        {/* <!--Carousel items--> */}
+        <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+          {/* <!--First item--> */}
+          <div
+            className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-twe-carousel-item
+            data-twe-carousel-active
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+              className="block w-full"
+              alt="Wild Landscape"
+            />
+          </div>
+          {/* <!--Second item--> */}
+          <div
+            className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-twe-carousel-item
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+              className="block w-full"
+              alt="Camera"
+            />
+          </div>
+          {/* <!--Third item--> */}
+          <div
+            className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-twe-carousel-item
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+              className="block w-full"
+              alt="Exotic Fruits"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center border-2 h-[70vh]">
+        <div className="flex justify-center items-center border-2 border-red-500 rounded-tl w-[75%] gap-5">
+          <div className="shadow-7xl">
+            {/* <video className="videoWrapper w-[30rem] h-[30rem] object-cover" loop playsInline preload="auto" autoPlay muted>
+              <source src=""/>
+            </video> */}
+
+            <video className=" w-full h-[25rem] object-cover"
+            loop
+            autoPlay
+            preload="auto" 
+            muted
+            playsinline
+            style={{cursor:"auto", width:"100%",height:"fit", bordeRadius:"0px",display:"block",objectFit:"fill", 
+            backgroundColor:"rgba(0, 0, 0, 0)", objectPosition:"50% 50%"}}
+            >
+            <source src={vid} />
+            </video>
+            <div>
+              <p>hello</p>
+            </div>
+          </div>
+          <div>2</div>
+        </div>
+      </div>
+
+
     </div>
   );
 };

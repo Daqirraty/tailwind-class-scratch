@@ -6,7 +6,7 @@ import { FaBasketballBall } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="w-full text-white absolute drop-shadow-md opacity-25 top flex justify-center">
+    <div className="w-full text-white bg-black/15 backdrop-opacity-10 absolute top flex justify-center">
       <div className="w-[70%] flex gap-5 items-center py-5 ">
         <div>
           <img src={logo} alt="" />
