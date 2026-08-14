@@ -2,7 +2,7 @@ import logo from "../assets/logo.svg";
 import { IoIosArrowDown, IoIosSearch} from "react-icons/io";
 // import { CiSearch } from "react-icons/ci";
 import { FaBasketballBall } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,16 +13,21 @@ const Navbar = () => {
         </div>
         <div className="flex justify-between items-center w-full">
             <ul className="w-[75%] flex justify-around py-5 font-black">
-          <li className="flex items-center gap-2">
-            About
+          <Link to="/loginnn">
+            <li className="flex items-center gap-2">
+            Login
             <IoIosArrowDown />
           </li>
+          </Link>
+          
+          <Link to="/contact">  
           <li className="flex items-center gap-2">
-            About
+            Bolu
             <IoIosArrowDown />
           </li>
+          </Link>
           <li className="flex items-center gap-2">
-            About
+            Responsiveness
             <IoIosArrowDown />
           </li>
           <li className="flex items-center gap-2">

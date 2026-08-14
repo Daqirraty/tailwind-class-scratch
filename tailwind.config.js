@@ -9,6 +9,7 @@ export default {
   ],
   theme: {
     extend: {
+      display:['group-hover'],
       colors: {
         primary: "#F1CD76",
         secondary: "#D0A651",

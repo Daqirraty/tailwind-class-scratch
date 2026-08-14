@@ -6,28 +6,31 @@ import ReversedDivSection from "../components/reversedDivSection";
 // import cadburyAndMore from "../assets/cadburyAndMore.png"
 import wiggleVideo from "../assets/wiggle.mp4"; // adjust the path
 import databundle from "../assets/databundle.png"; // adjust the path
-// import submitNin from "../assets/submitNin.png"; // adjust the path
-// import submitNin from "../assets/submitNin.png"; // adjust the path
-// import submitNin from "../assets/submitNin.png"; // adjust the path
-// import submitNin from "../assets/submitNin.png"; // adjust the path
 
-import { Carousel, Popover, Ripple, initTWE } from "tw-elements";
-import { useEffect } from "react";
+// import { Carousel, Popover, Ripple, initTWE } from "tw-elements";
 
 import vid from "../assets/vid.mp4"; // adjust the path
+// import Navbar2 from "../components/Navbar2";
+// import NavbarwithMapping from "../components/NavbarwithMapping";
+import NavbarWithNavlink from "../components/NavbarWithNavlink";
+import Carousel from "../components/carousel"
 const Home = () => {
-  useEffect(() => {
-    initTWE({
-      Carousel,
-      Popover,
-      Ripple,
-    });
-  }, []);
+  
+  
+  // useEffect(() => {
+  //   initTWE({
+  //     Carousel,
+  //     Popover,
+  //     Ripple,
+  //   });
+  // }, []);
   // initTWE({ Carousel });
 
   return (
     <div className="relative text-boluColos ">
-      <Navbar />
+      {/* <Navbar2/> */}
+      {/* <NavbarwithMapping/> */}
+      <NavbarWithNavlink/>
       {/* Hero Section */}
       <div className="flex items-center bg-heroBG bg-cover bg-no-repeat h-[90vh]">
         <div className="w-full flex justify-center mx-5">
@@ -51,7 +54,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* Section 2*/}
       <div className="flex justify-center bg-section2BG bg-center bg-cover h-screen">
         <div className="w-[40rem] h-fit flex flex-col justify-center gap-y-5 items-center mt-[6rem] text-center">
@@ -294,6 +296,8 @@ const Home = () => {
           <div>2</div>
         </div>
       </div>
+
+      <Carousel/>
 
 
     </div>
