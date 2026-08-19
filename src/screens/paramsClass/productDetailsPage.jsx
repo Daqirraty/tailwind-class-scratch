@@ -21,7 +21,6 @@ const ProductDetailsPage = () => {
           <div className="w-[20%]">
             <h2>{allCardData?.title}</h2>
             <p>{allCardData?.description}</p>
-            {/* <p>Price: ${allCardData?.price.toFixed(2)}</p> */}
             <button>Add to Cart</button>
           </div>
         </div>
